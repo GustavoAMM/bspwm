@@ -59,10 +59,8 @@ super + r
 	bspc wm -r
 
 # close and kill
-super + {_,shift + }q
+super + q
 	bspc node -{c,k}
-
-####
 
 # rotate desktop
 super + {_,shift + }r
