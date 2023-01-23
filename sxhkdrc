@@ -51,7 +51,7 @@ super + p
 	pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'El archivo de configuracion se ha recargado con exito'
 	
 # Random wallpaper
-super + Right
+super + alt + {Left,Right}
 	RandomWall
 
 # Reiniciar BSPWM
@@ -74,52 +74,14 @@ super + shift + c
 super + {t,s,f}
 	bspc node -t {tiled,floating,fullscreen}
 
-# set the node flags
-ctrl + alt {m,x,s,p,i}
-	bspc node -g {marked,locked,sticky,private,hidden}
-
-
-# Focused desktop window gaps scroll
-super + button{4,5}
-	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
-
-# Global window gaps scroll
-super + alt + button{4,5}
-	bspc config window_gap $(( $(bspc config window_gap) {-,+} 5 ))
-
-# focus the node in the given direction
-super + {_,shift + }{Left,Down,Up,Right}
-	bspc node -{f,s} {west,south,north,east}
-
-# focus the node for the given path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
-
 # focus the next/previous node in the current desktop
-alt + {_,shift + }Tab
+alt + Tab
 	bspc node -f {next,prev}.local
 
-# focus the next/previous desktop in the current monitor
-super + alt + {Left,Right}
-	bspc desktop -f {prev,next}.local
-
-# focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
-
-# focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
-
-#
-# preselect
-#
 
 # preselect the direction
 super + ctrl + {Left,Down,Up,Right}
@@ -134,7 +96,6 @@ super + ctrl + space
 	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
-super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
