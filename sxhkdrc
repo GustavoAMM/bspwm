@@ -24,8 +24,8 @@ super + u
 
 # screenshoots
 super + Print
-  screenshoter
-    
+  flameshot full
+ 
 # Bloquear la pantall
 super + l
   betterlockscreen -l
