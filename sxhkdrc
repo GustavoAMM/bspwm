@@ -26,7 +26,7 @@ super + u
 super + Print
   flameshot full
  
-# Bloquear la pantall
+# Bloquear la pantalla
  super + l
   betterlockscreen -l
 
@@ -39,7 +39,7 @@ super + Escape
 	{xkill}
 
 # Menu aplicaciones
-super + @space
+super + d
 	rofi -no-lazy-grab -show drun -theme $HOME/.config/bspwm/rices/$RICETHEME/launcher.rasi
 	
 # Theme Selector
@@ -51,7 +51,7 @@ super + p
 	pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'El archivo de configuracion se ha recargado con exito'
 	
 # Random wallpaper
-super + alt + w
+super + Right
 	RandomWall
 
 # Reiniciar BSPWM
