@@ -1,33 +1,30 @@
-# terminal emulator
+# Terminal emulator
 super + Return
 	kitty
-	
-# Floating Terminal
-super + alt + Return
-	termite -t floaterm
 	
 # Navegador
 super + w
   brave
 
-#Navegador Incognito
+# Navegador Incognito
 super + shift + w
   brave --incognito
+
 # Explorador de archivos
 super + e
-  thunar
+  Thunar
 
-#hide
+# hide
 super + h
 	HideBar -h
 
-#unhide
+# unhide
 super + u 
 	HideBar -u
-		     
+
 # screenshoots
 super + Print
-    screenshoter
+  screenshoter
     
 # Bloquear la pantall
 super + l
