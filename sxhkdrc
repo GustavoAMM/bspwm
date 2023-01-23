@@ -27,7 +27,7 @@ super + Print
   flameshot full
  
 # Bloquear la pantall
-super + l
+ super + l
   betterlockscreen -l
         
 # Apagar, Reiniciar, Cerrar Sesion, bloquear
