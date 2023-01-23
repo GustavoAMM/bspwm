@@ -92,24 +92,10 @@ super + alt + shift + {h,j,k,l}
 
 ## Media keys
 XF86AudioRaiseVolume
-	pactl set-sink-volume 0 +5%
+	pactl set-sink-volume 0 +10%
 
 XF86AudioLowerVolume
-	pactl set-sink-volume 0 -5%
+	pactl set-sink-volume 0 -10%
 
 XF86AudioMute
 	pactl set-sink-mute 0 toggle
-
-XF86AudioPlay 
-        playerctl play-pause
-        
-XF86AudioStop
-        playerctl stop
-        
-XF86AudioNext 
-        playerctl next
-        
-XF86AudioPrev 
-        playerctl previous
-        
-        
