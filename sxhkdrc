@@ -112,20 +112,26 @@ super + i
 
 #bspwm rice
 
+#Aolicaciones
 super + d
     rofi -show drun -theme "$HOME/.config/rofi/themes/app-launcher.rasi"
 
+#Power menu {apapar, suspender, reiniciar, bloquear}
 super + x
 	~/bin/powermenu
 
+#Calculadora
 super + c
     rofi -show calc -modi calc -theme "$HOME/.config/rofi/themes/calc.rasi"
 
+#wifi menu
 super + shift + z
     ~/bin/wifimenu
 
+#Calendario
 super + m
     ~/bin/calendar-launcher
 
+#Emoji
 super + shift + e
     rofi -modi emoji -show emoji -theme "$HOME/.config/rofi/themes/emojimenu.rasi"
